@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(CharacterController))] //
 public class PlayerMover : MonoBehaviour
 {
     public float moveSpeed = 4f;
