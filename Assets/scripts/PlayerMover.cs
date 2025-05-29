@@ -36,7 +36,8 @@ public class PlayerMover : MonoBehaviour
         cc.Move(moveDirection*moveSpeed*Time.deltaTime); //움직이게 하는코드
 
         //애니메이션 실행부
-        float floatSpeed = new Vector3(moveDirection.x ,0f, moveDirection.y).magnitude;
+        float floatSpeed = new Vector3(moveDirection.x ,0f, moveDirection.z).magnitude;
+        Debug.Log(floatSpeed);
         controller.UpdateMoveAnim(floatSpeed);
     }
 }

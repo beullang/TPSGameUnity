@@ -4,9 +4,7 @@ public class PlayerAnimationController : MonoBehaviour
 {
     //움직ㅇㅣㄴㅡㄴ 동ㅈㅏㄱ
     public Animator playerAnim;
-    
-    // 유니티 C# / C C++
-    // ㅁ
+
     private void Awake()
     {
         playerAnim = GetComponentInChildren<Animator>();
