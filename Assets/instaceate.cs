@@ -2,18 +2,16 @@ using UnityEngine;
 
 public class instaceate : MonoBehaviour
 {
-    //클래스(기능)
-    public Rigidbody body; 
-    public Animator playeranimator;
-    public bool state;
+    public GameObject bullet; // 복제할 총알
+    public Transform firePos; //총알이 발사될 위치
 
-    private void Start()
-    {
-        body = GetComponentInChildren<Rigidbody>(); //자기 자신이 가지고 있는
-    }
     private void Update()
     {
-        
-        playeranimator.SetBool("Change", state);
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            var obj = Instantiate(bullet, bullet.transform.position, bullet.transform.rotation);
+            var objrb = obj.GetComponent<Rigidbody>();
+            objrb.AddForce(new Vector3(0,0,5), ForceMode.Impulse);
+        }
     }
 }
