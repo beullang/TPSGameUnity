@@ -37,7 +37,7 @@ public class PlayerMover : MonoBehaviour
 
         //局聪皋捞记 角青何
         float floatSpeed = new Vector3(moveDirection.x ,0f, moveDirection.z).magnitude;
-        Debug.Log(floatSpeed);
+        //Debug.Log(floatSpeed);
         controller.UpdateMoveAnim(floatSpeed);
     }
 }
